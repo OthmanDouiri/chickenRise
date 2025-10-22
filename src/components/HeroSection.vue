@@ -257,9 +257,8 @@ onUnmounted(() => {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   margin-bottom: 2rem;
   font-family:Georgia, 'Times New Roman', Times, serif;
-  word-break: keep-all;
-  overflow-wrap: break-word;
-  hyphens: none;
+  word-wrap: break-word;
+  hyphens: auto;
 }
 
 .highlight-text {
