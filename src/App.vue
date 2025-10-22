@@ -3,6 +3,7 @@ import Navbar from './components/Navbar.vue'
 import HeroSection from './components/HeroSection.vue'
 import AboutUsSection from './components/AboutUsSection.vue'
 import TakeAwaySection from './components/TakeAwaySection.vue'
+import ImageCarousel from './components/ImageCarousel.vue'
 import HalalFoodSection from './components/HalalFoodSection.vue'
 import LocationSection from './components/LocationSection.vue'
 import FooterSection from './components/FooterSection.vue'
@@ -14,6 +15,7 @@ import FooterSection from './components/FooterSection.vue'
     <HeroSection />
     <AboutUsSection />
     <TakeAwaySection />
+    <ImageCarousel />
     <!-- <HalalFoodSection /> -->
     <LocationSection />
     <FooterSection />

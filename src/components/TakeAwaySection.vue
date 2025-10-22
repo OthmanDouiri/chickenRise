@@ -46,9 +46,13 @@
               
               
               <div class="cta-container">
-                <a href="https://glovoapp.com" target="_blank" class="btn btn-glovo">
-                  <i class="fas fa-motorcycle me-2"></i>
+                <a href="https://glovo.go.link/open?adjust_deeplink=glovoapp%3A%2F%2Fopen%3Flink_type%3Dstore%26store_id%3D540385&adjust_t=s321jkn" target="_blank" class="btn btn-glovo">
+                  <div class="brand-icon glovo-icon me-2">G</div>
                   Pide en GLOVO
+                </a>
+                <a href="https://www.ubereats.com/es/store/chicken-rise/540385" target="_blank" class="btn btn-uber">
+                  <div class="brand-icon uber-icon me-2">U</div>
+                  Pide en Uber Eats
                 </a>
               </div>
             </div>
@@ -294,11 +298,13 @@ onMounted(() => {
 
 .cta-container {
   margin-top: 2rem;
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
 }
 
-.btn-glovo {
-  background: linear-gradient(45deg, #ffc107, #ffb300);
-  color: #000;
+.btn-glovo,
+.btn-uber {
   border: none;
   padding: 1rem 2.5rem;
   font-size: 1.2rem;
@@ -308,11 +314,18 @@ onMounted(() => {
   text-transform: uppercase;
   letter-spacing: 1px;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(255, 193, 7, 0.3);
   text-decoration: none;
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  flex: 1;
+  min-width: 200px;
+}
+
+.btn-glovo {
+  background: linear-gradient(45deg, #ffc107, #ffb300);
+  color: #000;
+  box-shadow: 0 4px 15px rgba(255, 193, 7, 0.3);
 }
 
 .btn-glovo:hover {
@@ -320,6 +333,56 @@ onMounted(() => {
   color: #000;
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(255, 193, 7, 0.4);
+}
+
+.btn-uber {
+  background: linear-gradient(45deg, #000000, #1a1a1a);
+  color: #fff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.btn-uber:hover {
+  background: linear-gradient(45deg, #06c167, #04a755);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(6, 193, 103, 0.4);
+}
+
+.brand-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  font-weight: 900;
+  font-size: 16px;
+  font-family: 'Inter', sans-serif;
+  transition: all 0.3s ease;
+}
+
+.glovo-icon {
+  background: #fff;
+  color: #ffc107;
+  border: 2px solid #fff;
+}
+
+.btn-glovo:hover .glovo-icon {
+  background: #ffc107;
+  color: #000;
+  transform: scale(1.1);
+}
+
+.uber-icon {
+  background: #fff;
+  color: #000;
+  border: 2px solid #fff;
+}
+
+.btn-uber:hover .uber-icon {
+  background: #06c167;
+  color: #fff;
+  transform: scale(1.1);
 }
 
 /* Elementos Decorativos */
@@ -437,9 +500,15 @@ onMounted(() => {
     font-size: 0.95rem;
   }
   
-  .btn-glovo {
+  .cta-container {
+    gap: 1rem;
+  }
+  
+  .btn-glovo,
+  .btn-uber {
     padding: 0.8rem 2rem;
     font-size: 1.1rem;
+    min-width: 180px;
   }
 }
 
@@ -467,9 +536,17 @@ onMounted(() => {
     gap: 0.75rem;
   }
   
-  .btn-glovo {
+  .cta-container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .btn-glovo,
+  .btn-uber {
     padding: 0.75rem 1.8rem;
     font-size: 1rem;
+    min-width: 100%;
+    flex: none;
   }
   
   .decorative-elements {
